@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lesson 22</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/app.js" defer></script>
+  </head>
+  <body>
+    <section class="container">
+      <button id="open-dialog">Open Dialog</button>
+    </section>
+    <dialog id="popup">
+      <div class="popup-container">
+        <button id="close-dialog">Close Dialog</button>
+        <form action="#" method="#" id="form">
+          <input type="hidden" name="id" id="postId" />
+          <div class="input-group">
+            <label for="title">Enter title</label>
+            <input name="title" type="text" id="title" required />
+          </div>
+          <div class="input-group">
+            <label for="body">Enter body</label>
+            <input name="body" type="text" id="body" required />
+          </div>
+          <div class="input-group">
+            <label for="userId">Enter user ID</label>
+            <input name="userId" type="number" id="userId" required />
+          </div>
+
+          <button type="submit">Add</button>
+        </form>
+      </div>
+    </dialog>
+  </body>
+</html>
