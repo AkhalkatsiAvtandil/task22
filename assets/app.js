@@ -50,6 +50,14 @@ async function getSinglePost() {
 }
 
 async function deletePost(id) {
+  (fetch("https://jsonplaceholder.typicode.com/posts/${id}"),
+    {
+      method: "DELETE",
+      headers: {
+        "content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify(id),
+    });
   // TODO: წაშლის ფუნქცია, რომელიც მიიღებს id-ს და გააგზავნის წაშლის მოთხოვნას სერვერზე, method: "DELETE"
   //  method: "DELETE", https://jsonplaceholder.typicode.com/posts/${id}
   // TODO: წაშლის შემდეგ, წაშლილი პოსტი უნდა გაქრეს UI-დან, ანუ ქარდების სიიდან, თქვენ შეგიძლიათ ამოიღოთ ეს ქარდი დომიდან ან ახლიდან წამოიღოთ დატა getAllPosts() ფუნქციის მეშვეობით და განაახლოთ UI(რეალურად ამ სერვერზე არ ხდება მონაცემების ცვლილება, მაგრამ თქვენ შეგიძლიათ ისე მოიქცეთ თითქოს ხდება და UI-ს განაახლოთ)
