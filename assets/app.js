@@ -58,10 +58,34 @@ async function deletePost(id) {
       },
       body: JSON.stringify(id),
     });
+
   // TODO: წაშლის ფუნქცია, რომელიც მიიღებს id-ს და გააგზავნის წაშლის მოთხოვნას სერვერზე, method: "DELETE"
   //  method: "DELETE", https://jsonplaceholder.typicode.com/posts/${id}
   // TODO: წაშლის შემდეგ, წაშლილი პოსტი უნდა გაქრეს UI-დან, ანუ ქარდების სიიდან, თქვენ შეგიძლიათ ამოიღოთ ეს ქარდი დომიდან ან ახლიდან წამოიღოთ დატა getAllPosts() ფუნქციის მეშვეობით და განაახლოთ UI(რეალურად ამ სერვერზე არ ხდება მონაცემების ცვლილება, მაგრამ თქვენ შეგიძლიათ ისე მოიქცეთ თითქოს ხდება და UI-ს განაახლოთ)
 }
+
+function card() {
+  (fetch("https://jsonplaceholder.typicode.com/posts/${id}"),
+  {
+    method: "GET",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+    body: JSON.stringify(get),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
+// function getAllPosts(card : any) {
+// (fetch ('https://jsonplaceholder.typicode.com/posts/1'))
+
+// }
 
 function postActions() {
   // TODO:
